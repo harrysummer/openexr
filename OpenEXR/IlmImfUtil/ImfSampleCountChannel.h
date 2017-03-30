@@ -101,7 +101,7 @@ class IMF_EXPORT SampleCountChannel : public ImageChannel
     // behavior.
     //
 
-    const unsigned int &    operator () (int x, int y) const;
+    inline const unsigned int &    operator () (int x, int y) const;
 
 
     //
@@ -109,7 +109,7 @@ class IMF_EXPORT SampleCountChannel : public ImageChannel
     // the data window of the image level throws an Iex::ArgExc exception.
     //
 
-    const unsigned int &    at (int x, int y) const;
+    inline const unsigned int &    at (int x, int y) const;
 
     //
     // Faster access to n(x,y) for all pixels in a single horizontal row of
@@ -119,7 +119,7 @@ class IMF_EXPORT SampleCountChannel : public ImageChannel
     // results in undefined behavior.
     //
 
-    const unsigned int *    row (int r) const;
+    inline const unsigned int *    row (int r) const;
 
 
     //
@@ -227,10 +227,10 @@ class IMF_EXPORT SampleCountChannel : public ImageChannel
     // Functions that support the implementation of deep image channels.
     //
 
-    const unsigned int *    numSamples () const;
-    const unsigned int *    sampleListSizes () const;
-    const size_t *          sampleListPositions () const;
-    size_t                  sampleBufferSize () const;
+    inline const unsigned int *    numSamples () const;
+    inline const unsigned int *    sampleListSizes () const;
+    inline const size_t *          sampleListPositions () const;
+    inline size_t                  sampleBufferSize () const;
 
 
   private:

@@ -84,10 +84,10 @@ class BaseExc: public std::string, public std::exception
     //--------------------------------------------------
 
     IEX_EXPORT BaseExc &            assign (std::stringstream &s);	// assign (s.str())
-    IEX_EXPORT BaseExc &            operator = (std::stringstream &s);
+    /*IEX_EXPORT*/ BaseExc &            operator = (std::stringstream &s);
 
     IEX_EXPORT BaseExc &            append (std::stringstream &s);	// append (s.str())
-    IEX_EXPORT BaseExc &            operator += (std::stringstream &s);
+    /*IEX_EXPORT*/ BaseExc &            operator += (std::stringstream &s);
 
 
     //--------------------------------------------------
@@ -95,11 +95,11 @@ class BaseExc: public std::string, public std::exception
     // the definitions above.
     //--------------------------------------------------
 
-    IEX_EXPORT BaseExc &            assign (const char *s);
-    IEX_EXPORT BaseExc &            operator = (const char *s);
+    /*IEX_EXPORT*/ BaseExc &            assign (const char *s);
+    /*IEX_EXPORT*/ BaseExc &            operator = (const char *s);
 
-    IEX_EXPORT BaseExc &            append (const char *s);
-    IEX_EXPORT BaseExc &            operator += (const char *s);
+    /*IEX_EXPORT*/ BaseExc &            append (const char *s);
+    /*IEX_EXPORT*/ BaseExc &            operator += (const char *s);
 
 
     //--------------------------------------------------
@@ -109,7 +109,7 @@ class BaseExc: public std::string, public std::exception
     // has been installed (see below, setStackTracer()).
     //--------------------------------------------------
 
-    IEX_EXPORT const std::string &  stackTrace () const;
+    /*IEX_EXPORT*/ const std::string &  stackTrace () const;
 
   private:
 
@@ -123,7 +123,7 @@ class BaseExc: public std::string, public std::exception
 //-----------------------------------------------------
 
 #define DEFINE_EXC_EXP(exp, name, base)                         \
-    class exp name: public base                                 \
+    class /*exp*/ name: public base                                 \
     {                                                           \
       public:                                                   \
         name()                         throw(): base (0)    {}  \

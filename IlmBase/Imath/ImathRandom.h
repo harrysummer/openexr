@@ -70,7 +70,7 @@ IMATH_INTERNAL_NAMESPACE_HEADER_ENTER
 // length of 2^32.
 //-----------------------------------------------
 
-class IMATH_EXPORT Rand32
+class /*IMATH_EXPORT*/ Rand32
 {
   public:
 
@@ -106,7 +106,7 @@ class IMATH_EXPORT Rand32
     // Get the next value in the sequence (range: [0 ... 1[)
     //------------------------------------------------------
 
-    float		nextf ();
+    IMATH_EXPORT float		nextf ();
 
 
     //-------------------------------------------------------------------

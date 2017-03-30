@@ -130,8 +130,8 @@ class IMF_EXPORT DeepImageLevel : public ImageLevel
     // Access to the sample count channel
     //
 
-	SampleCountChannel &            sampleCounts();
-	const SampleCountChannel &      sampleCounts() const;
+	inline SampleCountChannel &            sampleCounts();
+	inline const SampleCountChannel &      sampleCounts() const;
 
   private:
     

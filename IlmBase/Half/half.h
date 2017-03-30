@@ -197,8 +197,8 @@ class half
     // Access to the internal representation
     //--------------------------------------
 
-    HALF_EXPORT unsigned short	bits () const;
-    HALF_EXPORT void		setBits (unsigned short bits);
+    /*HALF_EXPORT*/ unsigned short	bits () const;
+    /*HALF_EXPORT*/ void		setBits (unsigned short bits);
 
 
   public:

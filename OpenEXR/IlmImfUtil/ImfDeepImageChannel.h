@@ -65,7 +65,7 @@ class SampleCountChannel;
 // of the level.
 //
 
-class DeepImageChannel: public ImageChannel
+class IMF_EXPORT DeepImageChannel: public ImageChannel
 {
   public:
 
